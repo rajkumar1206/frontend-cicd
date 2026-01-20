@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "Installing dependencies..."
+      - npm install
+
+  build:
+    commands:
+      - echo "Building React application..."
+      - npm run build
+      - echo "Build completed successfully"
+
+  post_build:
+    commands:
+      - echo "Post-build phase started"
+      - echo "Build artifacts created"
+
+artifacts:
+  files:
+    - build/**/*
+  name: react-build
+
+cache:
+  paths:
+    - '/root/.npm/**/*'
+    - 'node_modules/**/*'
