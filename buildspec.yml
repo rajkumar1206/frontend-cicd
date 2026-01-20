@@ -16,6 +16,7 @@ phases:
     commands:
       - echo "Post-build phase started"
       - echo "Build artifacts created"
+      - aws s3 sync build/ s3://rajkumar1206-frontend-cicd-s3 --delete
 
 artifacts:
   files:
