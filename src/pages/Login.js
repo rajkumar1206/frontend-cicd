@@ -44,7 +44,7 @@ function Login() {
   return (
     <div className="auth-container">
       <div className="auth-card">
-        <h1>Login</h1>
+        <h1>Login :)</h1>
         {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleSubmit} className="auth-form">
           <input
